@@ -1,8 +1,9 @@
-# React + Vite
+# Base Bridge UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Send Ethereum from Mainnet to Coinbase's Base L2.
 
-Currently, two official plugins are available:
+Bridging will send ETH directly to the official Base Bridge contract at [0x49048044d57e1c92a77f79988d21fa8faf74e97e](https://etherscan.io/address/0x49048044d57e1c92a77f79988d21fa8faf74e97e).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Please allow five minutes for the bridge to process your transaction.
+
+For more information, read the official [Base Bridge documentation](https://docs.base.org/tools/bridges)

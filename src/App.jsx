@@ -26,6 +26,9 @@ function App() {
       <p>For more information, read the 
         <a href='https://docs.base.org/tools/bridges' target='_blank' rel='noreferrer'> Base Bridge documentation</a>.
       </p>
+      <p>Source code for this UI is available on
+        <a href='https://github.com/thoerner/base-bridge-ui' target='_blank' rel='noreferrer'> Github</a>.
+      </p>
     </div>
   )
 }
