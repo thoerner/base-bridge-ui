@@ -1,4 +1,4 @@
-export const shortenAddress = (address, chars = 4) => {
+export function shortenAddress (address, chars = 4) {
     if (!address) {
         return ''
     }
@@ -16,4 +16,17 @@ export const shortenAddress = (address, chars = 4) => {
     }
     const parsed = parseAddress(address)
     return `${parsed.prefix}...${parsed.suffix}`
+}
+
+export function amountToBigInt(amount) {
+    let bigInt = BigInt(amount * 10 ** 18)
+    return bigInt
+}
+
+export function bigIntToAmount(bigInt) {
+    let amount = Number(bigInt)
+    amount = amount / 10 ** 18
+    // need to round to 5 decimal places
+    amount = (Math.floor(amount * 100000) / 100000).toFixed(5)
+    return amount
 }

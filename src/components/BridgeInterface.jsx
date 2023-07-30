@@ -1,21 +1,9 @@
 import { useState } from 'react'
+import { amountToBigInt, bigIntToAmount } from '../utils/tools.js'
 import toast from 'react-hot-toast'
 
 const BridgeInterface = ({ signer, balance }) => {
     const [amount, setAmount] = useState(0)
-
-    function amountToBigInt(amount) {
-        let bigInt = BigInt(amount * 10 ** 18)
-        return bigInt
-    }
-
-    function bigIntToAmount(bigInt) {
-        let amount = Number(bigInt)
-        amount = amount / 10 ** 18
-        // need to round to 5 decimal places
-        amount = (Math.floor(amount * 100000) / 100000).toFixed(5)
-        return amount
-    }
 
     const handleAmountChange = (e) => {
         // need to make sure amount is a valid number
@@ -60,9 +48,9 @@ const BridgeInterface = ({ signer, balance }) => {
         <div className='bridge-interface'>
             <form className='bridge-form'>
                 <label htmlFor='amount'>Amount: </label>
-                <small>Balance: {bigIntToAmount(balance)}</small>
+                <small>Balance: {bigIntToAmount(balance)} ETH</small>
                 <input type='text' id='amount' onChange={handleAmountChange} />
-                {' '}ETH ➡️ Base{' '}
+                {' '}Mainnet ➡️ Base{' '}
                 <button onClick={bridge}>Bridge</button>
             </form>
         </div>
