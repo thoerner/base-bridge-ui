@@ -29,6 +29,9 @@ function App() {
       <p>Source code for this UI is available on
         <a href='https://github.com/thoerner/base-bridge-ui' target='_blank' rel='noreferrer'> Github</a>.
       </p>
+      <p>
+        A <a href='https://crypt0potam.us'>crypt0potamus</a> project.
+      </p>
     </div>
   )
 }
